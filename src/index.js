@@ -14,16 +14,16 @@ class Contact extends React.Component {
       data:[],
       project: ['airbnb-master','express-mongo-pet-shelter', 'Game']
     }
-    this.infoUrl = 'https://api.github.com/users/sharona1610/repos?access_token=c715aefb6b29303a7f57c9a6d341b4722584c925'
   }
-  componentDidMount(){
-    axios.get(this.infoUrl)
-      .then((res) => {
-        this.setState({data:res.data});
-      });
+
+  handleClickSkill(){
+    ReactDOM.render(<Skills />, document.getElementById('main'))
   }
-  handleClick(){
-    ReactDOM.render(<Project1 />, document.getElementById('some'))
+  handleClickHome(){
+    ReactDOM.render(<Skills />, document.getElementById('main'))
+  }
+  handleClickSkill(){
+    ReactDOM.render(<Skills />, document.getElementById('main'))
   }
   handleClickSkill(){
     ReactDOM.render(<Skills />, document.getElementById('main'))
@@ -40,22 +40,35 @@ class Contact extends React.Component {
             <p>Mail: sharona1610@gmail.com</p>
             <p>LinkedIn: www.linkedin.com/sharona1610</p>
             <p className='highlight'  onClick={this.handleClickSkill.bind(this)}>Skills</p>
-            <p className='highlight'  onClick={ReactDOM.render(<Skills />, document.getElementById('main')}>Home</p>
+            <p className='highlight'  onClick={this.handleClickSkill.bind(this)}>Home</p>
             <p className='highlight'  onClick={this.handleClickSkill.bind(this)}>Projects</p>
             <p className='highlight'  onClick={this.handleClickSkill.bind(this)}>Past Experience</p>
           </div>
           <div id='main'>
-          <Panel className='panel'>Hello, Thanks for stopping by
-        </Panel>
-      <div className="col-lg-9 col-md-9 col-sm-9 flexType">
-      <div className='card project2'><Project1 /></div>
-      <div className='card'><Project2 /></div>
-      <div className='card'><Project3 /></div>
-      <div><Skills /></div>
+          </div>
+        </div>
       </div>
-      </div>
-      </div>
-      </div>
+    )
+  }
+}
+
+class Homepage extends React.Component {
+  constructor(props){
+    super(props)
+    this.state={
+
+    }
+  }
+  render(){
+    return(
+      <div>
+      <Panel className='panel'>Hello, Thanks for stopping by
+    </Panel>
+  <div className="col-lg-9 col-md-9 col-sm-9 flexType">
+  <div className='card project2'><Project1 /></div>
+  <div className='card'><Project2 /></div>
+  <div className='card'><Project3 /></div>
+  </div>
     )
   }
 }
