@@ -15,60 +15,81 @@ class Contact extends React.Component {
       project: ['airbnb-master','express-mongo-pet-shelter', 'Game']
     }
   }
-
   handleClickSkill(){
     ReactDOM.render(<Skills />, document.getElementById('main'))
   }
   handleClickHome(){
-    ReactDOM.render(<Skills />, document.getElementById('main'))
+    ReactDOM.render(<Homepage />, document.getElementById('main'))
   }
-  handleClickSkill(){
-    ReactDOM.render(<Skills />, document.getElementById('main'))
+  handleClickPastexp(){
+    ReactDOM.render(<Pastexp />, document.getElementById('main'))
   }
-  handleClickSkill(){
-    ReactDOM.render(<Skills />, document.getElementById('main'))
+  handleClickProjects(){
+    ReactDOM.render(<Projects />, document.getElementById('main'))
   }
   render() {
     return (
-
-      <div className="grid">
-        <div className="row">
-          <div className="col-md-3 col-lg-3 col-sm-3 sidebar">
-            Sharona
-            <img src='pic.jpg' className='image' />
-            <p className='highlight'>Ph No: +65-86485387</p>
-            <p>Mail: sharona1610@gmail.com</p>
-            <p>LinkedIn: www.linkedin.com/sharona1610</p>
-            <p className='highlight'  onClick={this.handleClickSkill.bind(this)}>Skills</p>
-            <p className='highlight'  onClick={this.handleClickSkill.bind(this)}>Home</p>
-            <p className='highlight'  onClick={this.handleClickSkill.bind(this)}>Projects</p>
-            <p className='highlight'  onClick={this.handleClickSkill.bind(this)}>Past Experience</p>
-          </div>
-          <div id='main'>
+      <div>
+        <div className="grid">
+          <div className="row">
+            <div className="col-md-3 col-lg-3 col-sm-3 sidebar">
+            <div className='nav'>
+              <img src='mail.png' className='icons'/>
+              <img src='linkedinblue.png' className='icons'/>
+              <img src='GitHub.png' className='icons'/>
+              <img src='medium.png' className='icons'/>
+            </div>
+            <div className='textSidebar'>
+              <p className='highlight'  onClick={this.handleClickHome.bind(this)}>Home</p><br />
+              <p className='highlight'  onClick={this.handleClickProjects.bind(this)}>Projects</p><br />
+              <p className='highlight'  onClick={this.handleClickSkill.bind(this)}>Skills</p><br />
+              <p className='highlight'  onClick={this.handleClickPastexp.bind(this)}>Past Experience</p><br />
+              </div>
+            </div>
+            <div id='main'>
+            <Homepage />
+            </div>
           </div>
         </div>
+        <footer>Made with '&#9829'. &C Sharona Valluvan. Content thieves will be bludgeoned</footer>
+      </div>
+    )
+  }
+}
+
+class Projects extends React.Component{
+  render(){
+    return(
+      <div>
+      <div className='navBar'>
+      <p className='name'>Sharona Valluvan</p>
+      </div>
+      <div className="col-lg-9 col-md-9 col-sm-9 flexType">
+        <Project1 />
+        <Project2 />
+        <Project3 />
+      </div>
       </div>
     )
   }
 }
 
 class Homepage extends React.Component {
-  constructor(props){
-    super(props)
-    this.state={
-
-    }
-  }
   render(){
     return(
       <div>
-      <Panel className='panel'>Hello, Thanks for stopping by
-    </Panel>
-  <div className="col-lg-9 col-md-9 col-sm-9 flexType">
-  <div className='card project2'><Project1 /></div>
-  <div className='card'><Project2 /></div>
-  <div className='card'><Project3 /></div>
-  </div>
+        <Panel className='panel'>
+        <div className='panelText'>
+        <p className='color'>Sahaya Sharona Valluvan</p>
+        Full Stack Web Developer | Cost Engineer
+        </div>
+        </Panel>
+        <div className='bodyText'>
+        Hello, Thanks for stopping by! <br />
+        I love solving logical problems and have somehow always found myself being pulled towards coding/programming in my previous roles. I love the feeling of creating something from scratch which made me take up web development. <br />
+        Feel free to navigate through the links to know more about me
+        </div>
+      </div>
     )
   }
 }
@@ -91,7 +112,7 @@ class Project1 extends React.Component {
     })
   }
   render(){
-    return(<div>
+    return(<div className='card'>
       <div id="mod" className='black'>
       <h2 onClick={this.open.bind(this)}>BuszWatch</h2>
       <p>Real time Bus arrival time calculator</p>
@@ -137,7 +158,7 @@ class Project2 extends React.Component {
     })
   }
   render(){
-    return(<div>
+    return(<div className='card'>
       <div id="mod"></div>
       <h2 onClick={this.open.bind(this)}>Handy</h2>
       <p>Handymen freelancers Platform</p>
@@ -182,27 +203,29 @@ class Project3 extends React.Component {
     })
   }
   render(){
-    return(<div>
-      <div id="mod"></div>
-      <h2 onClick={this.open.bind(this)}>Tetris</h2>
-      <p>The classic game of clearing blocks</p>
+    return(
+      <div className='card'>
+        <div id="mod"></div>
+        <h2 onClick={this.open.bind(this)}>Tetris</h2>
+        <p>The classic game of clearing blocks</p>
 
-      <div className='static-modal'>
-      <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
-        <Modal.Header closeButton >
-        <Modal.Title>Tetris</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-        <p>What</p>
-        <p>Tetris is a classic block building game built without using canvas. It can be played with the intention of clearing filled rows. The user can rotate the blocks move it left and right</p>
-        <p>Why</p>
-        <p>When we were given the specifications for this project, I immediately got reminded of my childhood when I used to spend hours playing this game. I thought how cool would it be to build it myself and voila!</p>
-        <p>How</p>
-        <p>JavaScript, HTML,CSS</p>
-        </Modal.Body>
-        <Modal.Footer><Button onClick={this.close.bind(this)}>Close</Button>
-        </Modal.Footer>
-        </Modal>
+        <div className='static-modal'>
+          <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
+            <Modal.Header closeButton >
+              <Modal.Title>Tetris</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <p>What</p>
+              <p>Tetris is a classic block building game built without using canvas. It can be played with the intention of clearing filled rows. The user can rotate the blocks move it left and right</p>
+              <p>Why</p>
+              <p>When we were given the specifications for this project, I immediately got reminded of my childhood when I used to spend hours playing this game. I thought how cool would it be to build it myself and voila!</p>
+              <p>How</p>
+              <p>JavaScript, HTML,CSS</p>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button onClick={this.close.bind(this)}>Close</Button>
+            </Modal.Footer>
+          </Modal>
         </div>
       </div>
     )
@@ -210,40 +233,66 @@ class Project3 extends React.Component {
 }
 
 class Skills extends React.Component {
-  constructor(props){
-    super(props)
-    this.state={
-
-    }
-  }
   render(){
     return(
       <div>
-        <img className='logo' src='js.jpg' />
-        <img className='logo' src='rails.png' />
-        <img className='logo' src='nodejs.png' />
-        <img className='logo' src='mongodb.jpg' />
-        <img className='logo' src='postgresql.png' />
-        <img className='logo' src='HTML.png' />
-        <img className='logo' src='CSS.png' />
-        <img className='logo' src='react.jpg' />
-        <img className='logo' src='ruby.png' />
+      <div className='navBar'>
+      <p className='name'>Sharona Valluvan</p>
+      </div>
+      <div className='skills'>
+        <div className='skillsDiv'>
+          <h3>Languages</h3><hr />
+          <div className='flexType'>
+          <div className='outer'><img className='logo' src='js.jpg' />
+          </div>
+          <div className='outer'><img className='logo' src='HTML.png' />
+          </div>
+          <div className='outer'><img className='logo' src='CSS.png' />
+          </div>
+          <div className='outer'><img className='logo' src='ruby.png' />
+          </div>
+          </div>
+        </div>
+        <div className='skillsDiv'>
+          <h3>Environments</h3><hr />
+          <div className='flexType'>
+            <div className='outer'><img className='logo' src='rails.png' />
+            </div>
+            <div className='outer'><img className='logo' src='nodejs.png' />
+            </div>
+          </div>
+        </div>
+        <div className='skillsDiv'>
+          <h3>Databases</h3><hr />
+          <div className='flexType'>
+            <div className='outer'><img className='logo' src='mongobd.jpg' />
+            </div>
+            <div className='outer'><img className='logo' src='postgresql.png' />
+            </div>
+          </div>
+        </div>
+        <div className='skillsDiv'>
+          <h3>Front-end-Frameworks</h3><hr />
+          <div className='flexType'>
+            <div className='outer'><img className='logo' src='react.jpg' />
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     )
   }
 }
 
 class Pastexp extends React.Component{
-  constructor(props){
-    super(props)
-    this.state={
-
-    }
-  }
   render(){
-    return{
-
-    }
+    return (
+      <div>
+      <div className='navBar'>
+      <p className='name'>Sharona Valluvan</p>
+      </div>
+      hello</div>
+    )
   }
 }
 
