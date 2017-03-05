@@ -66,7 +66,7 @@ class Contact extends React.Component {
         <div className='static-modal'>
         <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
           <Modal.Header closeButton >
-          <Modal.Title><div className='black'>Contact me</div></Modal.Title>
+          <Modal.Title><div>Contact me</div></Modal.Title>
           </Modal.Header>
           <Modal.Body>
           <form action="https://formspree.io/sharona1610@gmail.com"
