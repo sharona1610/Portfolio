@@ -122,7 +122,7 @@ class Homepage extends React.Component {
         <p className='italicise'>"I love solving logical problems and have somehow always found myself being pulled towards coding/programming in my previous roles. I love the feeling of creating something from scratch which made me take up web development." <br /><br /><br /></p>
         <p>Feel free to navigate through the links to know more about me<br /><br />
         Or download my resume here! :)<br /><br />
-        <a href="../public/Resume.docx" target="_blank">Download</a>
+        <a href="https://drive.google.com/file/d/0B8Ng63wKGxpzek8xek1Gb1ctcW8/view" target="_blank">Download</a>
         </p>
         </div>
 
