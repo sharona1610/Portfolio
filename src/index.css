@@ -23,7 +23,11 @@ body {
   background-color: rgba(255,82,82,1);
   background: url('../public/pic10.jpg');
   background-size: cover;
+
   background-repeat: repeat-y;;
+
+
+
   background-position: center center;
   color: white;
   height: 100vh;
@@ -97,9 +101,15 @@ footer{
 
 }
 .icons{
+
   width: 10%;
   height: 10%;
   margin: 1% 5% 1% 5%;
+
+  /*width: 30px;
+  height: 30px;
+  margin: 1px 10px 5px 10px;*/
+
 }
 .nav{
   position: absolute;
@@ -235,6 +245,7 @@ li{
   text-align: left;
   margin-left: 30%;
 }
+
 .pastBody{
   height: 100vh;
   overflow: scroll;
