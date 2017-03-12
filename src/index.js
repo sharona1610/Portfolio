@@ -44,18 +44,18 @@ class Contact extends React.Component {
       <div>
         <div className="grid">
           <div className="row">
-            <div className="col-md-3 col-lg-3 col-sm-3 sidebar">
-            <div className='nav'>
-              <img src='mail.png' className='icons' onClick={this.open.bind(this)}/>
-              <a href='https://www.linkedin.com/in/sahaya-sharona-valluvan-76319582'><img src='linkedinblue.png' className='icons'/></a>
-              <a href='https://github.com/sharona1610'><img src='GitHub.png' className='icons'/></a>
-              <a href='https://medium.com/@sharona1610'><img src='medium.png' className='icons'/></a>
-            </div>
-            <div className='textSidebar'>
-              <p className='highlight hvr-float-shadow'  onClick={this.handleClickHome.bind(this)}>Home</p><br />
-              <p className='highlight hvr-float-shadow'  onClick={this.handleClickProjects.bind(this)}>Projects</p><br />
-              <p className='highlight hvr-float-shadow'  onClick={this.handleClickSkill.bind(this)}>Skills</p><br />
-              <p className='highlight hvr-float-shadow'  onClick={this.handleClickPastexp.bind(this)}>Former Avatar</p><br />
+            <div className="col-md-3 col-lg-3 col-sm-3 col-xs-3 sidebar">
+              <div className='nav'>
+                <img src='mail.png' className='icons' onClick={this.open.bind(this)}/>
+                <a href='https://www.linkedin.com/in/sahaya-sharona-valluvan-76319582'><img src='linkedinblue.png' className='icons'/></a>
+                <a href='https://github.com/sharona1610'><img src='GitHub.png' className='icons'/></a>
+                <a href='https://medium.com/@sharona1610'><img src='medium.png' className='icons'/></a>
+              </div>
+              <div className='textSidebar'>
+                <p className='highlight hvr-float-shadow'  onClick={this.handleClickHome.bind(this)}>Home</p><br />
+                <p className='highlight hvr-float-shadow'  onClick={this.handleClickProjects.bind(this)}>Projects</p><br />
+                <p className='highlight hvr-float-shadow'  onClick={this.handleClickSkill.bind(this)}>Skills</p><br />
+                <p className='highlight hvr-float-shadow'  onClick={this.handleClickPastexp.bind(this)}>Former Avatar</p><br />
               </div>
             </div>
             <div id='main'>
@@ -354,7 +354,7 @@ class Skills extends React.Component {
         <div className='skillsDiv'>
           <h3>Front-end-Frameworks</h3><hr />
           <div className='flexType'>
-            <div className='outer'><img className='logo' src='react.jpg' />
+            <div className='outer'><img className='logo' src='react.png' />
             </div>
           </div>
         </div>
@@ -371,19 +371,27 @@ class Pastexp extends React.Component{
       <div className='navBar'>
       <p className='name'>Sharona Valluvan</p>
       </div>
-      <div>
+      <div className='pastBody'>
       <h4>Education</h4><hr />
       <ul><li className='modal-body'>Web development Immersive at General Assembly, Singapore</li>
       <li className='modal-body'>Post Graduate Certification in Management from XLRI, Jamshedpur, India</li>
-      <li className='modal-body'>Bachelor of Engineering - Electrical and Electronics(2008-2012)</li></ul>
+      <li className='modal-body'>Bachelor of Engineering - Electrical and Electronics (2008-2012)</li></ul>
       <h4> Work Experience</h4><hr />
-      <h4>Danfoss industries (December 2015 - August 2016) – Product Cost Engineer, Supply Chain. </h4><hr />
+      <h5>Danfoss industries (2015 - 2016) – Product Cost Engineer, Supply Chain. </h5><hr />
       <ul>
-      <li className='modal-body'>Costing of electrical (motors, electric pumps, compressors etc) and sheet metal (fabricated) parts and further negotiations with global suppliers. </li>
-      <li className='modal-body'>Worked with 'Apriori', a cost estimating software and coded cost models for company specific manufacturing processes.</li></ul>
-      <h4>Ashok Leyland (September 2013 - December 2015) – Cost engineer.</h4><hr />
-      <ul><li className='modal-body'>Achieved annualised savings of Rs. 12 million (0.24 million SGD) on a family of parts through cost value analysis. </li>
-      <li className='modal-body'>Costing of electrical parts of the automobile (motors, alternators, harnesses)</li></ul>
+      <li className='modal-body'>Responsible for costing of electrical and sheet metal parts
+      and negotiations with global suppliers.</li>
+      <li className='modal-body'>Mastered and extensively used the proprietary
+      programming language of 'aPriori' to create customized
+      cost estimating models specific to the company</li></ul>
+      <h5>Ashok Leyland (2012 - 2015) – Cost engineer.</h5><hr />
+      <ul><li className='modal-body'>Achieved annualized savings of 0.24 million SGD on a
+      family of parts through cost saving measures and value
+      analysis.</li>
+      <li className='modal-body'>Responsible for costing of automotive electrical parts</li>
+      <li className='modal-body'>Developed Excel VBA Macros to automate certain aspects
+      of cost estimation leading to increase in work efficiency
+      by 18%</li></ul>
       </div>
       </div>
     )
