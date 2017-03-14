@@ -85,6 +85,17 @@ body {
   position: relative;
 }
 .project4{
+  background: url(../public/project4.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+.project5{
+  background: url(../public/project5.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   position: relative;
 }
 .black{

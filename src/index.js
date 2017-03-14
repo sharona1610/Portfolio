@@ -57,20 +57,6 @@ class Contact extends React.Component {
                 <p className='highlight hvr-float-shadow'  onClick={this.handleClickProjects.bind(this)}>Projects</p><br />
                 <p className='highlight hvr-float-shadow'  onClick={this.handleClickSkill.bind(this)}>Skills</p><br />
                 <p className='highlight hvr-float-shadow'  onClick={this.handleClickPastexp.bind(this)}>Former Avatar</p><br />
-
-            // <div className="col-md-3 col-lg-3 col-sm-3 sidebar">
-            // <div className='nav'>
-            //   <img src='mail.png' className='icons' onClick={this.open.bind(this)}/>
-            //   <a href='https://www.linkedin.com/in/sahaya-sharona-valluvan-76319582'><img src='linkedinblue.png' className='icons'/></a>
-            //   <a href='https://github.com/sharona1610'><img src='GitHub.png' className='icons'/></a>
-            //   <a href='https://medium.com/@sharona1610'><img src='medium.png' className='icons'/></a>
-            // </div>
-            // <div className='textSidebar'>
-            //   <p className='highlight hvr-float-shadow'  onClick={this.handleClickHome.bind(this)}>Home</p><br />
-            //   <p className='highlight hvr-float-shadow'  onClick={this.handleClickProjects.bind(this)}>Projects</p><br />
-            //   <p className='highlight hvr-float-shadow'  onClick={this.handleClickSkill.bind(this)}>Skills</p><br />
-            //   <p className='highlight hvr-float-shadow'  onClick={this.handleClickPastexp.bind(this)}>Former Avatar</p><br />
-
               </div>
             </div>
             <div id='main'>
@@ -112,7 +98,9 @@ class Projects extends React.Component{
       <p className='name'>Sharona Valluvan</p>
       </div>
       <div className="col-lg-9 col-md-9 col-sm-9 flexType">
-        <div><Project1 /></div>
+        <Project5 />
+        <Project4 />
+        <Project1 />
         <Project2 />
         <Project3 />
       </div>
@@ -326,6 +314,125 @@ class Project3 extends React.Component {
   }
 }
 
+class Project4 extends React.Component {
+  constructor(props){
+    super(props)
+    this.state={
+      showModal: false
+    }
+  }
+  close(){
+    this.setState({
+      showModal: false
+    })
+  }
+  open(){
+    this.setState({
+      showModal: true
+    })
+  }
+  render(){
+    return(<div className='card project4 hvr-float-shadow' onClick={this.open.bind(this)}>
+    <div id="mod" className='black'>
+    <h2>PikTalk</h2>
+    <p>A travellers guide</p>
+    </div>
+      <div className='static-modal'>
+      <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
+        <Modal.Header closeButton >
+        <Modal.Title><div className='modal-body-head'>PikTalk</div></Modal.Title>
+        </Modal.Header>
+        <Modal.Body className='modal-body'>
+        <Carousel className='carousel-pos'>
+    <Carousel.Item className='carousel' >
+      <img alt="550x250" src="project4-1.png"/>
+    </Carousel.Item>
+    <Carousel.Item className='carousel'>
+      <img alt="550x250" src="project4-2.png"/>
+    </Carousel.Item>
+    <Carousel.Item className='carousel'>
+      <img alt="550x250" src="project4-3.png"/>
+    </Carousel.Item>
+  </Carousel>
+        <p className='modal-body-head'>What</p>
+        <p>This website is meant to be a travellers guide. If you are travelling overseas in a country where you dont understand the mode of communication, just take a picture and upload to get translated text</p>
+        <p className='modal-body-head'>Why</p>
+        <p>Each time I travel to places where the mode of communication is not english I find it difficult to find directions. This website is meant to solve the same</p>
+        <p className='modal-body-head'>How</p>
+        <p>Google cloud Vision, Google translate, Node js, Express, Mongo DB, Mongoose, JavaScript, Html, Css, Materialize</p>
+        <p className='modal-body-head'>Links</p>
+        <a href='https://github.com/sharona1610/piktalk'><img className='modal-link' src='GitHub.png' /></a>
+        <a href='https://piktalk.herokuapp.com/'><img className='modal-link' src='web.jpeg' /></a>
+        </Modal.Body>
+        <Modal.Footer><Button onClick={this.close.bind(this)}>Close</Button>
+        </Modal.Footer>
+        </Modal>
+        </div>
+      </div>
+
+    )
+  }
+}
+
+class Project5 extends React.Component {
+  constructor(props){
+    super(props)
+    this.state={
+      showModal: false
+    }
+  }
+  close(){
+    this.setState({
+      showModal: false
+    })
+  }
+  open(){
+    this.setState({
+      showModal: true
+    })
+  }
+  render(){
+    return(<div className='card project5 hvr-float-shadow' onClick={this.open.bind(this)}>
+    <div id="mod" className='black'>
+    <h2>Portfolio</h2>
+    <p>A compilation of my work</p>
+    </div>
+      <div className='static-modal'>
+      <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
+        <Modal.Header closeButton >
+        <Modal.Title><div className='modal-body-head'>Portfolio</div></Modal.Title>
+        </Modal.Header>
+        <Modal.Body className='modal-body'>
+        <Carousel className='carousel-pos'>
+    <Carousel.Item className='carousel' >
+      <img alt="550x250" src="project5-1.png"/>
+    </Carousel.Item>
+    <Carousel.Item className='carousel'>
+      <img alt="550x250" src="project5-2.png"/>
+    </Carousel.Item>
+    <Carousel.Item className='carousel'>
+      <img alt="550x250" src="project5-3.png"/>
+    </Carousel.Item>
+  </Carousel>
+        <p className='modal-body-head'>What</p>
+        <p>My Portfolio!</p>
+        <p className='modal-body-head'>Why</p>
+        <p>Meant to be a compilation of my work and the progress that ive made in the ever changing tech field.</p>
+        <p className='modal-body-head'>How</p>
+        <p>React, JavaScript, Html, Css, Bootstrap</p>
+        <p className='modal-body-head'>Links</p>
+        <a href='https://github.com/sharona1610/portfolio'><img className='modal-link' src='GitHub.png' /></a>
+        <a href='https://sharona1610.github.io/portfolio'><img className='modal-link' src='web.jpeg' /></a>
+        </Modal.Body>
+        <Modal.Footer><Button onClick={this.close.bind(this)}>Close</Button>
+        </Modal.Footer>
+        </Modal>
+        </div>
+      </div>
+
+    )
+  }
+}
 
 class Skills extends React.Component {
   render(){
@@ -369,11 +476,7 @@ class Skills extends React.Component {
         <div className='skillsDiv'>
           <h3>Front-end-Frameworks</h3><hr />
           <div className='flexType'>
-<<<<<<< HEAD
             <div className='outer'><img className='logo' src='react.png' />
-=======
-            <div className='outer'><img className='logo' src='react.jpg' />
->>>>>>> df5bf072710f125e2aa3f44554aaf697dce12ff3
             </div>
           </div>
         </div>
@@ -390,7 +493,6 @@ class Pastexp extends React.Component{
       <div className='navBar'>
       <p className='name'>Sharona Valluvan</p>
       </div>
-<<<<<<< HEAD
       <div className='pastBody'>
       <h4>Education</h4><hr />
       <ul><li className='modal-body'>Web development Immersive at General Assembly, Singapore</li>
@@ -412,21 +514,6 @@ class Pastexp extends React.Component{
       <li className='modal-body'>Developed Excel VBA Macros to automate certain aspects
       of cost estimation leading to increase in work efficiency
       by 18%</li></ul>
-=======
-      <div>
-      <h4>Education</h4><hr />
-      <ul><li className='modal-body'>Web development Immersive at General Assembly, Singapore</li>
-      <li className='modal-body'>Post Graduate Certification in Management from XLRI, Jamshedpur, India</li>
-      <li className='modal-body'>Bachelor of Engineering - Electrical and Electronics(2008-2012)</li></ul>
-      <h4> Work Experience</h4><hr />
-      <h4>Danfoss industries (December 2015 - August 2016) – Product Cost Engineer, Supply Chain. </h4><hr />
-      <ul>
-      <li className='modal-body'>Costing of electrical (motors, electric pumps, compressors etc) and sheet metal (fabricated) parts and further negotiations with global suppliers. </li>
-      <li className='modal-body'>Worked with 'Apriori', a cost estimating software and coded cost models for company specific manufacturing processes.</li></ul>
-      <h4>Ashok Leyland (September 2013 - December 2015) – Cost engineer.</h4><hr />
-      <ul><li className='modal-body'>Achieved annualised savings of Rs. 12 million (0.24 million SGD) on a family of parts through cost value analysis. </li>
-      <li className='modal-body'>Costing of electrical parts of the automobile (motors, alternators, harnesses)</li></ul>
->>>>>>> df5bf072710f125e2aa3f44554aaf697dce12ff3
       </div>
       </div>
     )
