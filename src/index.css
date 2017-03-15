@@ -18,6 +18,10 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
+.scroll{
+  height: 100vh;
+  overflow: scroll;
+}
 
 .sidebar{
   background-color: rgba(255,82,82,1);
@@ -48,6 +52,7 @@ body {
 
 .panel{
   width: 100%;
+  top: 0%;
   margin: 0;
   background-color: black;
   color: white;
@@ -102,6 +107,7 @@ body {
   background: rgba(0,0,0,0.3);
   position: absolute;
   bottom: 0;
+  width: 100%;
   color: white;
 }
 footer{
@@ -157,6 +163,30 @@ hr{
 .color{
   color: rgba(255,82,82,1);
   font-size: 50px;
+}
+.color1{
+  font-size: 30px;
+}
+@media (max-width: 900px) {
+  .color {
+    color: rgba(255,82,82,1);
+    font-size: 40px;
+  }
+  .color1{
+    font-size: 20px;
+  }
+}
+@media (max-width: 500px){
+  .color {
+    color: rgba(255,82,82,1);
+    font-size: 30px;
+  }
+  .color1{
+    font-size: 15px;
+  }
+  .bodyText{
+    font-size: 8px;
+  }
 }
 .panelText{
   height: 100%
@@ -254,7 +284,6 @@ footer{
 }
 li{
   text-align: left;
-  margin-left: 30%;
 }
 
 .pastBody{

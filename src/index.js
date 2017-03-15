@@ -97,7 +97,7 @@ class Projects extends React.Component{
       <div className='navBar'>
       <p className='name'>Sharona Valluvan</p>
       </div>
-      <div className="col-lg-9 col-md-9 col-sm-9 flexType">
+      <div className="col-lg-9 col-md-9 col-sm-9 flexType scroll">
         <Project5 />
         <Project4 />
         <Project1 />
@@ -117,7 +117,7 @@ class Homepage extends React.Component {
         <Panel className='panel'>
         <div className='panelText'>
         <p className='color'>Sahaya Sharona Valluvan</p>
-        Full Stack Web Developer | Cost Engineer
+        <p className='color1'>Full Stack Web Developer | Cost Engineer</p>
         </div>
         </Panel>
         <div className='bodyText'>
@@ -441,7 +441,7 @@ class Skills extends React.Component {
       <div className='navBar'>
       <p className='name'>Sharona Valluvan</p>
       </div>
-      <div className='skills'>
+      <div className='skills scroll'>
         <div className='skillsDiv'>
           <h3>Languages</h3><hr />
           <div className='flexType'>
